@@ -1,0 +1,17 @@
+name: Blazy
+type: module
+description: "Provides basic Blazy integration for lazy loading and multi-serving images."
+# core: 8.x
+package: Blazy
+dependencies:
+  - drupal:filter
+  - drupal:media (>= 8.6)
+test_dependencies:
+  - drupal:views
+  - video_embed_field:video_embed_media
+
+# Information added by Drupal.org packaging script on 2019-01-07
+version: '8.x-2.0-alpha1'
+core: '8.x'
+project: 'blazy'
+datestamp: 1546859887

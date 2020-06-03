@@ -1,0 +1,44 @@
+***************
+*** 47,60 ****
+      );
+    }
+  
+    /**
+     * {@inheritdoc}
+     */
+    public function getFile() {
+      // Make sure that the path to the plugin.js matches the file structure of
+      // the CKEditor plugin you are implementing.
+-     $path = '/libraries/font';
+-     return $path . '/plugin.js';
+    }
+  
+    /**
+--- 47,73 ----
+      );
+    }
+  
++   /**
++    * Get library path.
++    */
++   public function getLibraryPath() {
++     if (\Drupal::moduleHandler()->moduleExists('libraries')) {
++       $path = libraries_get_path('font');
++     }
++     else {
++       $path = base_path() . 'libraries/font';
++     }
++ 
++     return $path;
++   }
++ 
+    /**
+     * {@inheritdoc}
+     */
+    public function getFile() {
+      // Make sure that the path to the plugin.js matches the file structure of
+      // the CKEditor plugin you are implementing.
++     return $this->getLibraryPath() . '/plugin.js';
+    }
+  
+    /**

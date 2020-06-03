@@ -1,0 +1,6 @@
+gallery_alert:
+  version: 0.1
+  js:
+    js/openy_prgf_gallery_alert.js: {}
+  dependencies:
+    - core/jquery

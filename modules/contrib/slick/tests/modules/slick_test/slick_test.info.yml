@@ -1,0 +1,17 @@
+name: Slick Test
+description: 'Testing Slick.'
+type: module
+hidden: true
+package: Testing
+# core: 8.x
+dependencies:
+  - blazy:blazy_test (>= 2.x)
+  - slick:slick (>= 2.x)
+  # @todo remove no longer supported VEM.
+  - video_embed_field/video_embed_media
+
+# Information added by Drupal.org packaging script on 2019-01-09
+version: '8.x-2.0-alpha1'
+core: '8.x'
+project: 'slick'
+datestamp: 1547031186
